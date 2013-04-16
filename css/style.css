@@ -1,0 +1,15 @@
+body {
+  background: #f6f6f6; }
+
+.header {
+  height: 160px;
+  background: blue; }
+
+.nav {
+  background: #333;
+  height: 60px; }
+
+.teaching {
+  background: #999;
+  height: 120px;
+  margin: 10px; }
