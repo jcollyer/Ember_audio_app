@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Ember Starter Kit</title>
+  <link href='http://fonts.googleapis.com/css?family=Kite+One|Oxygen|Scada|Maven+Pro|Raleway' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/style.css">
@@ -14,40 +15,100 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="index">
-    <div class="row">
-      <div class="large-12 columns">
+      <div class="container">
         <div class="row">
-          <div class="header small-12 columns"></div>
+          <div class="header small-12 columns">Pastor Nate Teaches Through the Bible</div>
         </div>
         <div class="row">
-          <div class="nav small-2 columns">About</div>
-          <div class="nav small-2 columns">Teaching</div>
-          <div class="nav small-2 columns">Writing</div>
-          <div class="nav small-2 columns">Video</div>
-          <div class="nav small-2 columns">Blog</div>
+          <div class="nav_main small-6 large-2 columns"><div class="main_nav_buttons">Home</div></div>
+          <div class="nav_main small-6 large-2 columns"><div class="main_nav_buttons">About</div></div>
+          <div class="nav_main small-6 large-2 columns"><div class="main_nav_buttons">Teaching</div></div>
+          <div class="nav_main small-6 large-2 columns"><div class="main_nav_buttons">Writing</div></div>
+          <div class="nav_main small-6 large-2 columns"><div class="main_nav_buttons">Video</div></div>
+          <div class="nav_main small-6 large-2 columns"><div class="main_nav_buttons">Blog</div></div>
+        </div>
+
+        <div class="row">
+          <div class="welcome_info small-12 columns">
+            <span class="hh1">Welcome,</span> join us with pastor 
+            <span class="hh1">Nate</span> on our journey 
+            <span class="hh1">through the bible!</span>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="nav small-6 large-3 columns"><div class="nav_buttons btTxt">Old Testament</div></div>
+          <div class="nav small-6 large-3 columns"><div class="nav_buttons btTxt">New Testament</div></div>
+          <div class="nav small-6 large-3 columns"><div class="nav_buttons btTxt">Most Recent</div></div>
+          <div class="nav small-6 large-3 columns"><div class="nav_buttons btTxt">Most Popular</div></div>
         </div>
 
         <div class="teachings">
           <div class="teaching_top row">
-            <div class="teaching small-2 columns"></div>
-            <div class="teaching small-2 columns"></div>
-            <div class="teaching small-2 columns"></div>
-            <div class="teaching small-2 columns"></div>
-            <div class="teaching small-2 columns"></div>
-            <div class="teaching small-2 columns"></div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching1.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching2.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching3.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching4.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching5.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching6.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
           </div>
           <div class="teaching_bottom row">
-            <div class="teaching small-2 columns"></div>
-            <div class="teaching small-2 columns"></div>
-            <div class="teaching small-2 columns"></div>
-            <div class="teaching small-2 columns"></div>
-            <div class="teaching small-2 columns"></div>
-            <div class="teaching small-2 columns"></div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching7.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching1.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching2.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching3.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching4.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
+            <div class="teaching small-6 large-2 columns">
+              <div class="teaching_img"><img src="img/teaching5.jpg" /></div>
+              <div class="teaching_overlay">Here describes the Teaching and other important info.</div>
+            </div>
           </div>
         </div>
 
+        <div class="row">
+          <div class="audio_player small-12 columns"><div class="panel">content</div></div>
+        </div>
+
+        <div class="row">
+          <div class="footer small-12 columns"><div class="panel">content</div></div>
+        </div>
+
       </div>
-    </div>
+
     <ul>
     {{#each item in model}}
       <li>{{item}}</li>

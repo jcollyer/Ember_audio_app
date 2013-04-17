@@ -1,19 +1,98 @@
+@import url('green_button.css');
+
+$kite:'Kite One', sans-serif;
+$scada:'Scada', sans-serif;
+
+@mixin grad_dark {
+background-color: #545555;
+background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(84, 85, 85)), to(rgb(40, 41, 41)));
+background-image: -webkit-linear-gradient(top, rgb(84, 85, 85), rgb(40, 41, 41));
+background-image: -moz-linear-gradient(top, rgb(84, 85, 85), rgb(40, 41, 41));
+background-image: -o-linear-gradient(top, rgb(84, 85, 85), rgb(40, 41, 41));
+background-image: -ms-linear-gradient(top, rgb(84, 85, 85), rgb(40, 41, 41));
+background-image: linear-gradient(top, rgb(84, 85, 85), rgb(40, 41, 41));
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#545555', EndColorStr='#282929');
+}
+
+@mixin grad_light {
+background-color: #fdffff;
+background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(253, 255, 255)), to(rgb(207, 209, 215)));
+background-image: -webkit-linear-gradient(top, rgb(253, 255, 255), rgb(207, 209, 215));
+background-image: -moz-linear-gradient(top, rgb(253, 255, 255), rgb(207, 209, 215));
+background-image: -o-linear-gradient(top, rgb(253, 255, 255), rgb(207, 209, 215));
+background-image: -ms-linear-gradient(top, rgb(253, 255, 255), rgb(207, 209, 215));
+background-image: linear-gradient(top, rgb(253, 255, 255), rgb(207, 209, 215));
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fdffff', EndColorStr='#cfd1d7');
+}
+
 body{
 	background:#f6f6f6;
+	font-size:100%;
+	//background:url('../img/squairy_light.png');
+	background:url('../img/wavegrid.png');
 }
 
 .header {
-	height:160px;
-	background:blue;
+	font-size:0%;
+	padding:8% 0%;
+	background:url('../img/header.png')  no-repeat;
+	background-size:100%;
+	margin:2% 0 0 0;
+}
+
+.nav_main {
+	height:60px;
+	margin:2% 0;
+	.main_nav_buttons{
+		padding:12px 0px;
+		border:1px solid #333;
+		box-shadow:0 1px 0 #555 inset, 0 -1px 0 #555 inset;
+		@include grad_dark;
+		color:#ccc;
+		text-align:center;
+		font-size:170%;
+		font-family:$scada;
+	}
+}
+
+.welcome_info {
+	padding:10px;
+	font-size:120%;
+	text-align:center;
 }
 
 .nav {
-	background:#333;
-	height:60px;
+	height:40px;
+	margin:20px 0;
+	.nav_buttons{
+		padding:12px 0px;
+		text-align:center;
+		font-size:170%;
+		font-family:$scada;
+	}
+}
+.teachings {
+	.teaching{
+		
+	}
+
 }
 
-.teaching {
-	background:#999;
-	height:120px;
-	margin:10px;
+.audio_player {
+	background:#ddd;
+	height:320px;
+}
+
+.hh1{
+	font-family:$kite;
+	font-size:140%;
+}
+
+.hh2{
+	font-family:$scada;
+	font-size:120%;
+}
+.footer {
+	background:#555;
+	height:220px;
 }

@@ -1,15 +1,62 @@
+@import url("green_button.css");
 body {
-  background: #f6f6f6; }
+  background: #f6f6f6;
+  font-size: 100%;
+  background: url("../img/wavegrid.png"); }
 
 .header {
-  height: 160px;
-  background: blue; }
+  font-size: 0%;
+  padding: 8% 0%;
+  background: url("../img/header.png") no-repeat;
+  background-size: 100%;
+  margin: 2% 0 0 0; }
+
+.nav_main {
+  height: 60px;
+  margin: 2% 0; }
+  .nav_main .main_nav_buttons {
+    padding: 12px 0px;
+    border: 1px solid #333;
+    box-shadow: 0 1px 0 #555 inset, 0 -1px 0 #555 inset;
+    background-color: #545555;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#545555), to(#282929));
+    background-image: -webkit-linear-gradient(top, #545555, #282929);
+    background-image: -moz-linear-gradient(top, #545555, #282929);
+    background-image: -o-linear-gradient(top, #545555, #282929);
+    background-image: -ms-linear-gradient(top, #545555, #282929);
+    background-image: linear-gradient(top, #545555, #282929);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#545555', EndColorStr='#282929');
+    color: #ccc;
+    text-align: center;
+    font-size: 170%;
+    font-family: "Scada", sans-serif; }
+
+.welcome_info {
+  padding: 10px;
+  font-size: 120%;
+  text-align: center; }
 
 .nav {
-  background: #333;
-  height: 60px; }
+  height: 40px;
+  margin: 20px 0; }
+  .nav .nav_buttons {
+    padding: 12px 0px;
+    text-align: center;
+    font-size: 170%;
+    font-family: "Scada", sans-serif; }
 
-.teaching {
-  background: #999;
-  height: 120px;
-  margin: 10px; }
+.audio_player {
+  background: #ddd;
+  height: 320px; }
+
+.hh1 {
+  font-family: "Kite One", sans-serif;
+  font-size: 140%; }
+
+.hh2 {
+  font-family: "Scada", sans-serif;
+  font-size: 120%; }
+
+.footer {
+  background: #555;
+  height: 220px; }
