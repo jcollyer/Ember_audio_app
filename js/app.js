@@ -1,7 +1,19 @@
 App = Ember.Application.create();
 
+App.Store = DS.Store.extend({
+  revision: 12,
+  adapter: 'DS.FixtureAdapter'
+  // adapter: DS.RESTAdapter.extend({
+  //   url: 'http://localhost:3000'
+  // })
+});
+
 App.Router.map(function() {
-  // put your routes here
+  this.resource('about');
+  this.resource('teaching');
+  this.resource('writing');
+  this.resource('video');
+  this.resource('posts');
 });
 
 App.IndexRoute = Ember.Route.extend({
@@ -9,3 +21,5 @@ App.IndexRoute = Ember.Route.extend({
     return ['red', 'yellow', 'blue'];
   }
 });
+
+
