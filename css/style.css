@@ -92,3 +92,6 @@ body {
 .footer {
   background: #555;
   height: 220px; }
+  .footer h1 {
+    text-align: center;
+    padding: 30px; }
