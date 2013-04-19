@@ -9,16 +9,34 @@ App.Store = DS.Store.extend({
 });
 
 App.Router.map(function() {
-  this.resource('about');
-  this.resource('writing');
-  this.resource('video');
-  this.resource('posts', function(){
-  	this.resource('post', { path: ':post_id' })
-  });
-  this.resource('teachings', function(){
-		this.resource('teaching', { path: ':teaching_id' })
-	});
+  // this.resource('master', function(){
+  	 this.resource('teaching', { path: ':teaching_id' }, function(){
+
+	  	this.resource('home');
+		this.resource('about');
+		this.resource('writing');
+		this.resource('video');
+		this.resource('teachings');
+		this.resource('posts', function(){
+			this.resource('post', { path: ':post_id' })
+		})
+
+
+  		
+  	 // })
+  })
+
+
+  
 });
+
+App.IndexRoute = Ember.Route.extend({
+  redirect: function() {
+    this.transitionTo('teaching', { path: ':teaching_id'});
+  }
+});
+
+
 
 App.PostsRoute = Ember.Route.extend({
 	model: function(){
@@ -30,13 +48,15 @@ App.TeachingsRoute = Ember.Route.extend({
 	model: function(){
 		return App.Teaching.find();
 	}
-})
-
-App.IndexRoute = Ember.Route.extend({
-  model: function() {
-    return ['red', 'yellow', 'blue'];
-  }
 });
+
+App.MasterRoute = Ember.Route.extend({
+	model: function(){
+		return App.Teaching.find();
+	}
+});
+
+
 
 App.Post = DS.Model.extend({
 	title: DS.attr('string'),
